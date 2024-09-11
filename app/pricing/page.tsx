@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-export const meta Metadata = {
+export const metadata: Metadata = {
   title: 'Pricing Title',
   description: 'Pricing Description',
   keywords: ['pricing page', 'escrito en español'],
