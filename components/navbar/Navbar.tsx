@@ -1,3 +1,4 @@
+import { HomeIcon } from '@primer/octicons-react';
 import Link from 'next/link';
 // import React from 'react'
 
@@ -9,6 +10,12 @@ import Link from 'next/link';
 //   });
 // };
 
+const navItems = [
+  { title: 'About', href: '/about' },
+  { title: 'Pricing', href: '/pricing' },
+  { title: 'Contact', href: '/contact' },
+];
+
 export const Navbar = async() => {
 
   // await temporalAsync();
@@ -16,11 +23,16 @@ export const Navbar = async() => {
   
   return (
     <nav className='flex bg-blue-800 bg-opacity-30 p-2 m-2 rounded'>
+      <Link href={'/'} className='flex items-center'>
+      <HomeIcon className='mr-2'/>
         <span>Home</span>
+      </Link>
         <div className='flex flex-1'></div>
-        <Link className='mr-2' href='/about'>About</Link>
-        <Link className='mr-2' href='/pricing'>Pricing</Link>
-        <Link className='mr-2' href='/contact'>Contact</Link>
+        {
+        navItems.map((item) => (
+          <Link key={item.title} href={item.href} className='mr-2'>{item.title}</Link>
+        ))
+        }
     </nav>
   )
 }
