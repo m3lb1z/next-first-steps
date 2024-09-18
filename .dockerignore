@@ -18,3 +18,9 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Others
+.dockerignore
+README.md
+.git
+npm-debug.log

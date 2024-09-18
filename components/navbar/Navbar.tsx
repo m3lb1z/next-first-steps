@@ -9,9 +9,6 @@ const navItems = [
 ];
 
 export const Navbar = async () => {
-  // await temporalAsync();
-  // console.log('Navbar creado');
-
   return (
     <nav className="flex bg-blue-800 bg-opacity-30 p-2 m-2 rounded">
       <Link href={"/"} className="flex items-center">
